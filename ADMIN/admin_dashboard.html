@@ -86,7 +86,7 @@
     </div>
     <!-- TextGrid -->
     <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4 ">
-      <div
+      <div id="AdminUsers"
         class="flex flex-1 cursor-pointer gap-3 rounded-xl  p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
         <span class="material-symbols-outlined text-primary text-3xl">group</span>
         <div class="flex flex-col gap-1 mt-2">
@@ -94,7 +94,7 @@
           <p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Voir, ajouter, modifier</p>
         </div>
       </div>
-      <div
+      <div id="AdminCours"
         class="flex flex-1 cursor-pointer gap-3 rounded-xl  p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
         <span class="material-symbols-outlined text-primary text-3xl">school</span>
         <div class="flex flex-col gap-1 mt-2">
@@ -102,7 +102,7 @@
           <p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Créer, éditer, supprimer</p>
         </div>
       </div>
-      <div
+      <div id="AdminStats"
         class="flex flex-1 cursor-pointer gap-3 rounded-xl  p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
         <span class="material-symbols-outlined text-primary text-3xl">bar_chart</span>
         <div class="flex flex-col gap-1 mt-2">
@@ -157,6 +157,22 @@
       </div>
     </div>
   </div>
+
+<script>
+    const AdminUsers = document.getElementById('AdminUsers');
+    const AdminCours = document.getElementById('AdminCours');
+    const AdminStats = document.getElementById('AdminStats');
+    AdminUsers.addEventListener('click', () => {
+      window.location.href = 'admin_users.html';
+    });
+    AdminCours.addEventListener('click', () => {
+      window.location.href = 'admin_courses.html';
+    });
+    AdminStats.addEventListener('click', () => {
+      window.location.href = 'admin_stats.html';
+    });
+  </script>
+
 </body>
 
 </html>
