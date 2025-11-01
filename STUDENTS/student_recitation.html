@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>MémoÉtudiant - Recitation Practice</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#359EFF", "background-light": "#f5f7f8", "background-dark": "#0f1923", success: "#28A745", error: "#DC3545" }, fontFamily: { display: "Epilogue" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" } } } };</script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+  <div class="relative flex min-h-screen w-full flex-col">
+    <!-- Top App Bar -->
+    <header
+      class="flex items-center p-4 pb-2 justify-between bg-background-light dark:bg-background-dark sticky top-0 z-10">
+      <!-- Bouton de retour -->
+      <a href="student_dashboard.html"
+        class="flex items-center justify-center shrink-0 text-slate-700 dark:text-slate-300">
+        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+      </a>
+      <h1 class="text-lg font-bold flex-1 text-center text-slate-900 dark:text-slate-100">Chapitre 3 : La cellule
+      </h1>
+      <div class="size-10"></div> <!-- Spacer -->
+    </header>
+    <main class="flex flex-col flex-grow px-4">
+      <!-- Progress Indicator -->
+      <div class="flex flex-col gap-2 pt-4 pb-2">
+        <div class="flex justify-between items-center">
+          <p class="text-sm font-medium text-slate-600 dark:text-slate-400">Ta progression</p>
+          <p class="text-sm font-bold text-primary">25%</p>
+        </div>
+        <div class="rounded-full bg-slate-200 dark:bg-slate-700">
+          <div class="h-2 rounded-full bg-primary" style="width: 25%;"></div>
+        </div>
+      </div>
+      <!-- Instructional Text -->
+      <p class="text-slate-600 dark:text-slate-400 text-sm leading-normal text-center pt-4 pb-2">Appuie sur le
+        microphone pour commencer à réciter.</p>
+      <!-- Course Text Panel -->
+      <div class="flex-grow rounded-xl bg-white dark:bg-slate-800 p-6 shadow-sm overflow-y-auto my-4">
+        <p class="text-slate-800 dark:text-slate-200 text-base font-normal leading-relaxed">
+          <span class="text-success font-medium">La cellule est la plus petite unité du vivant.</span>
+          <span class="text-success font-medium">Tous les êtres vivants sont faits de cellules :</span>
+          <span class="text-success font-medium">les plantes, les animaux</span>
+          et même les <span class="text-error font-medium underline decoration-wavy">humainses.</span>
+          La cellule est composée d’une membrane, d’un cytoplasme et d’un noyau.
+          Le noyau commande les activités de la cellule, comme la croissance et la reproduction.
+          Elle fonctionne comme une petite usine qui travaille sans arrêt pour maintenir la vie.
+        </p>
+      </div>
+
+
+
+    </main>
+    <!-- Bottom Controls -->
+    <footer class="sticky bottom-0 bg-background-light dark:bg-background-dark pt-4 pb-6 px-4">
+      <div class="flex items-center justify-center gap-4">
+        <button
+          class="flex size-14 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors hover:bg-slate-300 dark:hover:bg-slate-600">
+          <span class="material-symbols-outlined text-2xl">replay</span>
+        </button>
+        <button
+          class="flex flex-shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-full h-20 w-20 bg-primary text-white shadow-lg shadow-primary/40 transition-transform hover:scale-105">
+          <span class="material-symbols-outlined text-4xl">mic</span>
+        </button>
+        <button
+          class="flex size-14 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors hover:bg-slate-300 dark:hover:bg-slate-600">
+          <span class="material-symbols-outlined text-2xl">volume_up</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Résultats du Quiz</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#359EFF",
+            "background-light": "#f5f7f8",
+            "background-dark": "#0f1923"
+          },
+          fontFamily: { display: "Epilogue" },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "2rem",
+            xl: "3rem",
+            full: "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#424242] dark:text-gray-200">
+  <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+
+    <!-- Barre du haut -->
+    <div
+      class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+      <div class="flex size-10 shrink-0 items-center justify-center">
+        <!-- Bouton de retour -->
+        <a href="student_dashboard.html"
+          class="flex items-center justify-center shrink-0 text-slate-700 dark:text-slate-300">
+          <span class="material-symbols-outlined text-2xl">arrow_back</span>
+        </a>
+      </div>
+      <h1
+        class="text-[#424242] dark:text-gray-200 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">
+        Résultats du Quiz
+      </h1>
+      <div class="size-10 shrink-0"></div>
+    </div>
+
+    <main class="flex-1 px-4 py-6">
+      <!-- Carte résumé du score -->
+      <div class="flex flex-col items-center gap-4 rounded-xl bg-white dark:bg-[#1C2A38] p-6 text-center shadow-sm">
+        <div class="relative flex size-40 items-center justify-center">
+          <svg class="absolute inset-0 size-full" viewBox="0 0 100 100">
+            <circle class="stroke-current text-gray-200 dark:text-gray-700" cx="50" cy="50" fill="none" r="45"
+              stroke-width="10"></circle>
+            <circle class="stroke-current text-[#359EFF] transform -rotate-90 origin-center" cx="50" cy="50" fill="none"
+              r="45" stroke-dasharray="282.74" stroke-dashoffset="42.411" stroke-linecap="round" stroke-width="10">
+            </circle>
+          </svg>
+          <div class="flex flex-col items-center">
+            <span class="text-4xl font-bold text-[#424242] dark:text-white">85%</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h2 class="text-xl font-bold text-[#424242] dark:text-white">Bravo !</h2>
+          <p class="text-sm text-[#BDBDBD] dark:text-gray-400">Tu as terminé le quiz avec succès.</p>
+        </div>
+      </div>
+
+      <!-- Détails de la performance -->
+      <div class="mt-8">
+        <h3 class="text-[#424242] dark:text-gray-300 text-lg font-bold leading-tight tracking-[-0.015em] pb-3">
+          Détails de ta performance
+        </h3>
+        <div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-[#1C2A38] p-3 shadow-sm">
+
+          <!-- Réponses correctes -->
+          <div class="flex items-center gap-4 p-3 min-h-14 justify-between">
+            <div class="flex items-center gap-4">
+              <div
+                class="text-[#4CAF50] flex items-center justify-center rounded-lg bg-[#E8F5E9] dark:bg-[#4CAF50]/20 shrink-0 size-10">
+                <span class="material-symbols-outlined">check_circle</span>
+              </div>
+              <p class="text-[#424242] dark:text-gray-200 text-base font-normal flex-1 truncate">
+                Réponses correctes
+              </p>
+            </div>
+            <div class="shrink-0">
+              <p class="text-[#424242] dark:text-gray-200 text-base font-semibold">17</p>
+            </div>
+          </div>
+
+          <!-- Réponses incorrectes -->
+          <div class="flex items-center gap-4 p-3 min-h-14 justify-between">
+            <div class="flex items-center gap-4">
+              <div
+                class="text-[#EF5350] flex items-center justify-center rounded-lg bg-[#FFEBEE] dark:bg-[#EF5350]/20 shrink-0 size-10">
+                <span class="material-symbols-outlined">cancel</span>
+              </div>
+              <p class="text-[#424242] dark:text-gray-200 text-base font-normal flex-1 truncate">
+                Réponses incorrectes
+              </p>
+            </div>
+            <div class="shrink-0">
+              <p class="text-[#424242] dark:text-gray-200 text-base font-semibold">3</p>
+            </div>
+          </div>
+
+          <!-- Temps écoulé -->
+          <div class="flex items-center gap-4 p-3 min-h-14 justify-between">
+            <div class="flex items-center gap-4">
+              <div
+                class="text-[#2b8cee] flex items-center justify-center rounded-lg bg-[#E0F7FA] dark:bg-[#2b8cee]/20 shrink-0 size-10">
+                <span class="material-symbols-outlined">timer</span>
+              </div>
+              <p class="text-[#424242] dark:text-gray-200 text-base font-normal flex-1 truncate">
+                Temps écoulé
+              </p>
+            </div>
+            <div class="shrink-0">
+              <p class="text-[#424242] dark:text-gray-200 text-base font-semibold">05:12</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Boutons d’action -->
+    <footer class="sticky bottom-0 w-full bg-background-light dark:bg-background-dark p-4 pt-2">
+      <div class="flex flex-col gap-3">
+        <!-- Bouton principal -->
+        <button
+          class="flex items-center justify-center rounded-xl bg-[#359EFF] h-12 text-white font-bold text-base leading-normal shadow-sm hover:bg-[#2b8ae6] transition-colors duration-300 active:scale-95">
+          Revoir les réponses
+        </button>
+
+        <!-- Bouton secondaire -->
+        <button
+          class="flex items-center justify-center rounded-xl bg-transparent h-12 text-[#359EFF] font-bold text-base leading-normal hover:bg-[#359EFF]/10 transition-colors duration-300 active:scale-95">
+          Refaire le quiz
+        </button>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

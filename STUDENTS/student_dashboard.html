@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>MémoÉtudiant Dashboard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#359EFF", "background-light": "#f5f7f8", "background-dark": "#0f1923", "card-light": "#FFFFFF", "card-dark": "#1a3a20", "text-primary-light": "#424242", "text-primary-dark": "#E0F7FA", "text-secondary-light": "#BDBDBD", "text-secondary-dark": "#a0b8a4" }, fontFamily: { display: "Epilogue" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" } } } };</script>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark">
+  <div class="relative flex min-h-screen w-full flex-col pb-24">
+
+
+
+    <!-- Top App Bar -->
+    <header class="flex items-center justify-between px-6 py-3 bg-white dark:bg-gray-900 shadow">
+      <!-- Profil à gauche -->
+      <div class="flex items-center gap-3">
+        <!-- Image profil -->
+        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOI7IsiNfAgK7S_QlkGUpQC7wwP-LWM_Fn6GXkhfxhcOTZxI000kPhOCtk5RxieB073IbmEUzNOf7JVslG8GHmJJgoISFHDND9Gmnn1p08goT1lIZG6nY1JUkVr8oXaQimyFms0hPS-QPW3lI6mIzdQgy1hGWIPHj5r3inTLCUrEo1bAasdFj1VOZu8nK-scK3xhkxKvTgkZM3Hx_OxYbLti1QU_5HmiQOD1agnPilLU5qqQBKJoBVbr9GPnTK-GMIvfuuK5mteKf6");'>
+        </div>
+
+        <!-- Texte profil -->
+        <div class="flex flex-col leading-tight">
+          <span class="text-sm text-gray-500 dark:text-gray-400">Welcome back,</span>
+          <span class="font-semibold text-gray-800 dark:text-white">étudiant</span>
+        </div>
+
+        <!-- Bouton menu profil -->
+        <div class="relative">
+          <button id="profile-btn" class="flex items-center justify-center ml-2 text-gray-700 dark:text-gray-300">
+            <span class="material-symbols-outlined">expand_more</span>
+          </button>
+
+          <!-- Menu déroulant -->
+          <div id="profile-menu"
+            class="hidden absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-md shadow-lg z-50 overflow-hidden">
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">👤 Profil</a>
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">📘 Mes cours</a>
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">📊 Statistiques</a>
+            <a href="student_welcome.html" class="block px-4 py-2 text-sm text-red-500 hover:bg-gray-100 dark:hover:bg-gray-700">🚪
+              Déconnexion</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notifications à droite -->
+      <div class="relative">
+        <button id="notif-btn" class="flex items-center justify-center text-gray-700 dark:text-gray-300">
+          <span class="material-symbols-outlined text-2xl">notifications</span>
+        </button>
+
+        <!-- Menu notifications -->
+        <div id="notif-menu"
+          class="hidden absolute right-0 mt-2 w-64 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-md shadow-lg z-50 overflow-hidden">
+          <div class="p-3 border-b border-gray-200 dark:border-gray-700 font-semibold text-sm">
+            Notifications
+          </div>
+          <div class="max-h-64 overflow-y-auto">
+            <div class="p-3 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer text-sm">
+              📘 Nouveau cours ajouté : “Révolution Algérienne
+            </div>
+            <div class="p-3 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer text-sm">
+              ⏰ Rappel : Révise tes fiches de science
+            </div>
+          </div>
+          <div
+            class="p-2 text-center text-sm text-primary font-medium border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer">
+            Voir tout
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+
+    <!-- Main Content -->
+    <main class="flex-1">
+      <!-- Overall Progress Card -->
+      <div class="p-4">
+        <div
+          class="flex flex-col items-center justify-start rounded-xl bg-card-light dark:bg-card-dark shadow-md p-6 @container">
+          <div class="flex w-full flex-col items-center gap-6 @lg:flex-row @lg:items-center">
+            <!-- Circular Progress -->
+            <div class="relative flex size-40 shrink-0 items-center justify-center">
+              <svg class="absolute inset-0" viewbox="0 0 100 100">
+                <circle class="stroke-current text-gray-200 dark:text-gray-700" cx="50" cy="50" fill="transparent"
+                  r="42" stroke-width="8"></circle>
+                <circle class="stroke-current text-primary" cx="50" cy="50" fill="transparent" r="42"
+                  stroke-dasharray="264" stroke-dashoffset="66" stroke-linecap="round" stroke-width="8"
+                  transform="rotate(-90 50 50)"></circle>
+              </svg>
+              <div class="flex flex-col items-center">
+                <span class="text-3xl font-bold text-text-primary-light dark:text-text-primary-dark">75%</span>
+                <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Terminé</span>
+              </div>
+            </div>
+            <!-- Stats -->
+            <div class="flex w-full flex-col gap-4">
+              <div class="flex items-center gap-4">
+                <div class="flex size-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined">school</span>
+                </div>
+                <div>
+                  <p class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">8 cours</p>
+                  <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Terminé</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="flex size-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined">schedule</span>
+                </div>
+                <div>
+                  <p class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">24h 30m</p>
+                  <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Temps total d’étude</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="flex size-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+                  <span class="material-symbols-outlined">local_fire_department</span>
+                </div>
+                <div>
+                  <p class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">Série de 12 jours</p>
+                  <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Continue comme ça !</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Continue Learning Button -->
+      <div class="flex px-4 py-3">
+        <a href="student_quiz.html"
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 flex-1 bg-primary text-card-light dark:text-card-light gap-3 text-base font-bold leading-normal tracking-[0.015em] shadow-lg">
+          <span class="material-symbols-outlined">play_arrow</span>
+          <span class="truncate">Poursuis ta dernière activité</span>
+        </a>
+      </div>
+      <!-- My Subjects Section -->
+      <div class="px-4 pt-6 pb-3">
+        <h1 class="text-text-primary-light dark:text-text-primary-dark tracking-light text-2xl font-bold leading-tight">
+          Mes matières</h1>
+      </div>
+      <div class="flex flex-col gap-3 px-4">
+        <!-- Subject Card: History -->
+        <div class="flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+          <div class="flex items-center gap-4" id="studentCard">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+              <span class="material-symbols-outlined">history_edu</span>
+            </div>
+            <div class="flex-1">
+              <p class="font-bold text-text-primary-light dark:text-text-primary-dark">Histoire</p>
+              <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">90 % de réussite</p>
+            </div>
+          </div>
+          <div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+            <div class="h-2 rounded-full bg-primary" style="width: 90%;"></div>
+          </div>
+        </div>
+        <!-- Subject Card: Chemistry -->
+        <div class="flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+          <div class="flex items-center gap-4" id="studentQuestion">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+              <span class="material-symbols-outlined">experiment</span>
+            </div>
+            <div class="flex-1">
+              <p class="font-bold text-text-primary-light dark:text-text-primary-dark">Chimie</p>
+              <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">65 % de réussite</p>
+            </div>
+          </div>
+          <div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+            <div class="h-2 rounded-full bg-primary" style="width: 65%;"></div>
+          </div>
+        </div>
+        <!-- Subject Card: Science -->
+        <div class="flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+          <div class="flex items-center gap-4" id="studentRecitation">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+              <span class="material-symbols-outlined">science</span>
+            </div>
+            <div class="flex-1">
+              <p class="font-bold text-text-primary-light dark:text-text-primary-dark">Science</p>
+              <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">35 % de réussite</p>
+            </div>
+          </div>
+          <div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+            <div class="h-2 rounded-full bg-primary" style="width: 35%;"></div>
+          </div>
+        </div>
+        <!-- Subject Card: Mathematics -->
+        <div class="flex flex-col gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+              <span class="material-symbols-outlined">calculate</span>
+            </div>
+            <div class="flex-1">
+              <p class="font-bold text-text-primary-light dark:text-text-primary-dark">Mathématiques</p>
+              <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">78 % de réussite</p>
+            </div>
+          </div>
+          <div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+            <div class="h-2 rounded-full bg-primary" style="width: 78%;"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-6 left-6 z-20">
+      <a href="student_uploadcourse.html"
+        class="flex size-16 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-card-light shadow-xl">
+        <span class="material-symbols-outlined text-3xl">add</span>
+      </a>
+      <!-- Bouton de retour -->
+      <!-- <a href="student_dashboard.html" class="flex items-center justify-center shrink-0 text-slate-700 dark:text-slate-300">
+        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+      </a> -->
+    </div>
+  </div>
+
+  <!-- Chatbot -->
+  <div id="chatbot-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <!-- Fenêtre du chat -->
+    <div id="chat-window"
+      class="hidden w-80 h-96 bg-card-light dark:bg-card-dark rounded-2xl shadow-xl mb-3 overflow-hidden flex flex-col">
+      <!-- En-tête -->
+      <div class="bg-primary text-white p-3 flex justify-between items-center">
+        <h3 class="font-semibold">Assistant Étudiant 🤖</h3>
+        <button id="close-chat" class="text-white hover:text-gray-200">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <!-- Messages -->
+      <div id="chat-messages" class="flex-1 overflow-y-auto p-3 space-y-2 text-sm">
+        <div class="text-gray-500 text-center text-xs mt-2">Commence une discussion 👋</div>
+      </div>
+      <!-- Entrée utilisateur -->
+      <div class="p-3 border-t border-gray-200 dark:border-gray-700 flex">
+        <input id="chat-input" type="text" placeholder="Écris ton message..."
+          class="flex-1 rounded-l-lg px-3 py-2 text-sm border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none">
+        <button id="send-chat"
+          class="bg-primary text-white px-3 rounded-r-lg flex items-center justify-center hover:bg-blue-500">
+          <span class="material-symbols-outlined">send</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Bouton flottant -->
+    <button id="chat-toggle"
+      class="flex size-16 items-center justify-center rounded-full bg-primary text-white shadow-lg hover:scale-105 transition-transform">
+      <span class="material-symbols-outlined text-3xl">chat</span>
+    </button>
+  </div>
+
+  <script>
+    const chatToggle = document.getElementById("chat-toggle");
+    const chatWindow = document.getElementById("chat-window");
+    const closeChat = document.getElementById("close-chat");
+    const sendChat = document.getElementById("send-chat");
+    const chatInput = document.getElementById("chat-input");
+    const chatMessages = document.getElementById("chat-messages");
+
+    chatToggle.addEventListener("click", () => {
+      chatWindow.classList.toggle("hidden");
+    });
+
+    closeChat.addEventListener("click", () => {
+      chatWindow.classList.add("hidden");
+    });
+
+    sendChat.addEventListener("click", sendMessage);
+    chatInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") sendMessage();
+    });
+
+    function sendMessage() {
+      const text = chatInput.value.trim();
+      if (!text) return;
+
+      // Message utilisateur
+      const userMsg = document.createElement("div");
+      userMsg.className = "bg-primary text-white rounded-xl p-2 self-end ml-auto max-w-[75%]";
+      userMsg.textContent = text;
+      chatMessages.appendChild(userMsg);
+
+      chatInput.value = "";
+
+      // Réponse simulée
+      setTimeout(() => {
+        const botMsg = document.createElement("div");
+        botMsg.className = "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 rounded-xl p-2 max-w-[75%]";
+        botMsg.textContent = "Je suis ton assistant. Comment puis-je t’aider à étudier ?";
+        chatMessages.appendChild(botMsg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 600);
+
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+  </script>
+
+  <script>
+    // Menu profil
+    const profileBtn = document.getElementById("profile-btn");
+    const profileMenu = document.getElementById("profile-menu");
+    // Notifications
+    const notifBtn = document.getElementById("notif-btn");
+    const notifMenu = document.getElementById("notif-menu");
+
+    profileBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      profileMenu.classList.toggle("hidden");
+      notifMenu.classList.add("hidden");
+    });
+
+    notifBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      notifMenu.classList.toggle("hidden");
+      profileMenu.classList.add("hidden");
+    });
+
+    window.addEventListener("click", () => {
+      profileMenu.classList.add("hidden");
+      notifMenu.classList.add("hidden");
+    });
+  </script>
+
+  <script>
+    const studentCard = document.getElementById('studentCard');
+    const studentQuestion = document.getElementById('studentQuestion');
+    const studentRecitation = document.getElementById('studentRecitation');
+    studentCard.addEventListener('click', () => {
+      window.location.href = 'student_flashcard.html';
+    });
+    studentQuestion.addEventListener('click', () => {
+      window.location.href = 'student_question.html';
+    });
+    studentRecitation.addEventListener('click', () => {
+      window.location.href = 'student_recitation.html';
+    });
+  </script>
+
+</body>
+
+</html>
