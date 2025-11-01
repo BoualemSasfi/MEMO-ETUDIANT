@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>MémoÉtudiant - Connexion / Inscription</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#359EFF", "background-light": "#f5f7f8", "background-dark": "#0f1923" }, fontFamily: { display: "Epilogue" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" } } } };</script>
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="font-display">
+  <div
+    class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-4 group/design-root">
+    <div class="w-full max-w-md space-y-6">
+      <!-- Section en-tête -->
+      <div class="flex flex-col items-center space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-6xl text-primary mb-3">neurology</span>
+          <span class="text-3xl font-bold text-slate-800 dark:text-slate-200">MémoÉtudiant</span>
+        </div>
+        <div class="text-center">
+          <h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Bon retour !</h1>
+          <p class="mt-1 text-slate-600 dark:text-slate-400">Connectez-vous pour réviser plus intelligemment</p>
+        </div>
+      </div>
+      <!-- Contrôle segmenté -->
+      <div class="flex px-4 py-3">
+        <div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-slate-200 dark:bg-slate-800 p-1.5">
+          <label
+            class="flex h-full flex-1 cursor-pointer items-center justify-center rounded-lg px-2 text-sm font-medium leading-normal text-slate-600 dark:text-slate-400 has-[:checked]:bg-white has-[:checked]:text-primary has-[:checked]:shadow-sm dark:has-[:checked]:bg-slate-700 dark:has-[:checked]:text-white">
+            <span class="truncate">Connexion</span>
+            <input checked="" class="invisible w-0" name="auth-toggle" type="radio" value="Log In" />
+          </label>
+          <label
+            class="flex h-full flex-1 cursor-pointer items-center justify-center rounded-lg px-2 text-sm font-medium leading-normal text-slate-600 dark:text-slate-400 has-[:checked]:bg-white has-[:checked]:text-primary has-[:checked]:shadow-sm dark:has-[:checked]:bg-slate-700 dark:has-[:checked]:text-white">
+            <span class="truncate">Inscription</span>
+            <input class="invisible w-0" name="auth-toggle" type="radio" value="Sign Up" />
+          </label>
+        </div>
+      </div>
+      <!-- Champs du formulaire -->
+      <div class="space-y-4 px-4">
+        <!-- Champ Email -->
+        <label class="flex flex-col flex-1">
+          <p class="pb-2 text-sm font-medium text-slate-700 dark:text-slate-300">Email ou Nom d'utilisateur</p>
+          <div class="relative flex w-full flex-1 items-center">
+            <span class="material-symbols-outlined absolute left-4 text-slate-400 dark:text-slate-500">person</span>
+            <input
+              class="form-input flex h-14 w-full flex-1 resize-none overflow-hidden rounded-xl border border-slate-300 bg-white placeholder:text-slate-400 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-primary dark:focus:ring-primary/30 pl-12 pr-4 text-base font-normal"
+              placeholder="Entrez votre email ou nom d'utilisateur" value="" />
+          </div>
+        </label>
+        <!-- Champ Mot de passe -->
+        <label class="flex flex-col flex-1">
+          <div class="flex items-center justify-between pb-2">
+            <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Mot de passe</p>
+            <a class="text-sm font-medium text-primary hover:underline" href="#">Mot de passe oublié ?</a>
+          </div>
+          <div class="relative flex w-full flex-1 items-center">
+            <span class="material-symbols-outlined absolute left-4 text-slate-400 dark:text-slate-500">lock</span>
+            <input
+              class="form-input flex h-14 w-full flex-1 resize-none overflow-hidden rounded-xl border border-slate-300 bg-white placeholder:text-slate-400 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-primary dark:focus:ring-primary/30 pl-12 pr-12 text-base font-normal"
+              placeholder="Entrez votre mot de passe" type="password" value="" />
+            <div
+              class="absolute right-0 flex h-full w-12 items-center justify-center text-slate-400 dark:text-slate-500">
+              <span class="material-symbols-outlined cursor-pointer">visibility_off</span>
+            </div>
+          </div>
+        </label>
+      </div>
+      <!-- Bouton d'action -->
+      <div class="px-4 pt-4">
+        <a href="student_profil.html"
+          class="flex h-14 w-full items-center justify-center rounded-xl bg-primary px-6 text-base font-semibold text-white shadow-sm transition-all hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 dark:focus:ring-offset-background-dark">Se
+          connecter</a>
+      </div>
+      <!-- Texte bas de page -->
+      <p class="px-4 text-center text-sm text-slate-600 dark:text-slate-400">Nouveau ici ? <a
+          class="font-semibold text-primary hover:underline" href="#">Créer un compte</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

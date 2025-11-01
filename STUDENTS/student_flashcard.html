@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>MémoÉtudiant - Révision Flashcards</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#359EFF",
+            "background-light": "#f5f7f8",
+            "background-dark": "#0f1923"
+          },
+          fontFamily: { display: "Epilogue" },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "2rem",
+            xl: "3rem",
+            full: "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+
+    .flip-card {
+      perspective: 1000px;
+      width: 100%;
+      max-width: 600px;
+      height: 420px;
+      margin: auto;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+
+<body class="font-display">
+  <div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+    <!-- Barre du haut -->
+    <header class="p-4 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10">
+      <div class="flex items-center pb-4 justify-between">
+        <!-- Bouton de retour -->
+      <a href="student_dashboard.html" class="flex items-center justify-center shrink-0 text-slate-700 dark:text-slate-300">
+        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+      </a>
+        <h1 class="text-[#333333] dark:text-slate-100 text-lg font-bold flex-1 text-center">
+          Chapitre 3 : La Première Guerre mondiale
+        </h1>
+        <div class="w-8"></div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <div class="flex justify-between">
+          <p class="text-slate-600 dark:text-slate-400 text-sm font-medium">Cartes révisées</p>
+          <p class="text-[#333333] dark:text-slate-200 text-sm font-medium">5 / 20</p>
+        </div>
+        <div class="rounded-full bg-[#E0E0E0] dark:bg-slate-700 h-2">
+          <div class="h-2 rounded-full bg-[#359EFF]" style="width: 25%;"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Zone principale -->
+    <main class="flex-1 flex flex-col items-center justify-center p-4">
+      <div class="w-full max-w-lg @container">
+        <div class="flip-card" id="flashcard">
+          <div class="flip-card-inner">
+            <!-- Face avant -->
+            <div
+              class="flip-card-front shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <p class="text-[#333333] dark:text-slate-100 text-3xl font-bold leading-tight tracking-[-0.015em]">
+                Quand a commencé la Première Guerre mondiale ?
+              </p>
+              <p class="text-slate-500 dark:text-slate-400 text-base font-normal mt-6">
+                Appuie pour retourner la carte
+              </p>
+            </div>
+            <!-- Face arrière -->
+            <div class="flip-card-back shadow-[0_4px_12px_rgba(0,0,0,0.08)] bg-[#359EFF] border border-[#359EFF] text-white !text-white dark:bg-[#359EFF]/90 dark:border-[#359EFF]">
+              <p class="text-white dark:text-slate-100 text-2xl font-bold leading-tight">
+                Elle a commencé le <strong>28 juillet 1914</strong>, après l’assassinat de l’archiduc
+                <strong>François-Ferdinand</strong>.
+              </p>
+              <p class="text-slate-500 dark:text-slate-400 text-base font-normal mt-6">
+                Appuie pour revenir à la question
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Boutons bas -->
+    <footer class="flex justify-stretch w-full p-4 sticky bottom-0 bg-background-light dark:bg-background-dark">
+      <div class="flex flex-1 gap-4 flex-wrap justify-between">
+        <button
+          class="flex-1 flex items-center justify-center gap-2 rounded-lg h-14 px-5 bg-[#FF4C4C] text-white text-base font-bold shadow-md hover:bg-[#ff1f1f] transition active:scale-95">
+          <span class="material-symbols-outlined">close</span>
+          <span>Je ne sais pas</span>
+        </button>
+
+        <button
+          class="flex-1 flex items-center justify-center gap-2 rounded-lg h-14 px-5 bg-[#00C853] text-white text-base font-bold shadow-md hover:bg-[#00a344] transition active:scale-95">
+          <span class="material-symbols-outlined">check</span>
+          <span>Je sais</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const card = document.getElementById('flashcard');
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  </script>
+</body>
+
+</html>

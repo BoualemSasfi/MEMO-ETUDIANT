@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>MémoÉtudiant - Ajouter un nouveau contenu</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#359EFF",
+            "background-light": "#f5f7f8",
+            "background-dark": "#0f1923"
+          },
+          fontFamily: { display: "Epilogue" },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "2rem",
+            xl: "3rem",
+            full: "9999px"
+          }
+        }
+      }
+    };
+  </script>
+  <style type="text/tailwindcss">
+    .progress-ring-circle {
+      transition: stroke-dashoffset 0.35s;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="font-display">
+  <div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+    <!-- Barre supérieure -->
+    <div class="flex items-center p-4 pb-2 bg-background-light dark:bg-background-dark relative">
+      <!-- Bouton de retour -->
+      <a href="student_dashboard.html"
+        class="flex items-center justify-center shrink-0 text-slate-700 dark:text-slate-300">
+        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+      </a>
+
+      <!-- Texte centré -->
+      <h2
+        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg font-bold text-slate-900 dark:text-slate-100">
+        <span class="material-symbols-outlined text-2xl">neurology</span>
+        MémoÉtudiant
+      </h2>
+    </div>
+
+
+    <!-- Titre principal -->
+    <div class="px-4 pt-6 pb-2">
+      <h1 class="text-slate-900 dark:text-slate-50 text-3xl font-bold tracking-tight text-left">
+        Ajouter un nouveau contenu
+      </h1>
+    </div>
+
+    <!-- Texte d’introduction -->
+    <div class="px-4 pb-6">
+      <p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal">
+        Choisissez comment vous souhaitez ajouter votre contenu d’étude pour commencer à apprendre.
+      </p>
+    </div>
+
+    <!-- Cartes d’action -->
+    <div class="flex flex-col gap-4 px-4">
+
+      <!-- Carte : Importer un fichier -->
+      <div
+        class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+        <div class="flex flex-col gap-1 flex-1">
+          <p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">Importer un fichier</p>
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">
+            Sélectionnez un fichier PDF, une image ou un fichier texte
+          </p>
+        </div>
+        <div class="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/20 dark:bg-primary/50">
+          <span class="material-symbols-outlined text-3xl text-primary">upload_file</span>
+        </div>
+      </div>
+
+      <!-- Carte : Scanner avec la caméra -->
+      <div
+        class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+        <div class="flex flex-col gap-1 flex-1">
+          <p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">Scanner avec la caméra</p>
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">
+            Utilisez votre caméra pour scanner des documents
+          </p>
+        </div>
+        <div class="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/20 dark:bg-primary/50">
+          <span class="material-symbols-outlined text-3xl text-primary">photo_camera</span>
+        </div>
+      </div>
+
+      <!-- Carte : Coller du texte -->
+      <div
+        class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+        <div class="flex flex-col gap-1 flex-1">
+          <p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">Coller du texte</p>
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">
+            Collez du contenu depuis votre presse-papiers
+          </p>
+        </div>
+        <div class="flex size-14 shrink-0 items-center justify-center rounded-full bg-primary/20 dark:bg-primary/50">
+          <span class="material-symbols-outlined text-3xl text-primary">content_paste</span>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Espaceur -->
+    <div class="flex-grow"></div>
+
+    <!-- Indicateur de progression -->
+    <div class="mt-8 mb-4 p-4">
+      <div
+        class="flex flex-col items-center justify-center gap-4 rounded-xl bg-white dark:bg-slate-800 p-6 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+        <div class="relative inline-flex items-center justify-center">
+          <svg class="w-24 h-24">
+            <circle class="text-slate-200 dark:text-slate-700" cx="48" cy="48" fill="transparent" r="40"
+              stroke="currentColor" stroke-width="8"></circle>
+            <circle class="progress-ring-circle text-[#359EFF]" cx="48" cy="48" fill="transparent" r="40"
+              stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round"
+              stroke-width="8"></circle>
+          </svg>
+          <span class="absolute text-lg font-bold text-slate-700 dark:text-slate-300">75%</span>
+        </div>
+        <div class="text-center">
+          <p class="text-base font-semibold text-slate-800 dark:text-slate-200">Analyse du document...</p>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Cela peut prendre quelques instants.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
