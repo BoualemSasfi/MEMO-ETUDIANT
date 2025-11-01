@@ -7,7 +7,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Gestion des utilisateurs - MémoÉtudiant</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <script>
     tailwind.config = {
@@ -35,19 +36,25 @@
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       font-size: 24px;
     }
-    body { min-height: max(884px, 100dvh); }
+
+    body {
+      min-height: max(884px, 100dvh);
+    }
   </style>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display">
   <div class="relative min-h-screen w-full">
     <!-- Barre supérieure -->
-    <header class="sticky top-0 z-10 flex flex-col bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 shadow-sm pb-3">
+    <header
+      class="sticky top-0 z-10 flex flex-col bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 shadow-sm pb-3">
       <div class="flex items-center p-4">
-        <a href="admin_dashboard.html" class="text-text-primary dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10">
+        <a href="admin_dashboard.html"
+          class="text-text-primary dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10">
           <span class="material-symbols-outlined">arrow_back_ios_new</span>
         </a>
-        <h1 class="text-text-primary dark:text-white text-xl font-bold leading-tight tracking-tight flex-1 text-center pr-10">
+        <h1
+          class="text-text-primary dark:text-white text-xl font-bold leading-tight tracking-tight flex-1 text-center pr-10">
           Gestion des utilisateurs
         </h1>
       </div>
@@ -65,13 +72,15 @@
             class="form-input w-full rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 dark:text-white dark:placeholder-gray-400 py-3 pl-10 pr-4 text-base font-normal text-text-primary placeholder:text-text-secondary focus:outline-none focus:ring-2 focus:ring-green-action/50"
             placeholder="Rechercher par nom ou email..." type="text" />
         </div>
-        <button class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600">
+        <button
+          class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-text-primary dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600">
           <span class="material-symbols-outlined">filter_list</span>
         </button>
       </div>
 
       <!-- Utilisateur 1 -->
-      <div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 shadow-sm">
+      <div
+        class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 shadow-sm">
         <div class="flex items-start gap-4">
           <img class="h-14 w-14 shrink-0 rounded-full object-cover" data-alt="Photo de profil d'Eleanor Pena"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOIZRLTVa1yxJPMJ3uxuzvZ7rVH_4y2San5To72SCdTYYXU-ath8iBkuzqDXL2oVmtj4o5jBpPpx3f4xcBsEeVjrn6rEP7vtfV_d01WglivwZZpho31iK5vbsdE8Q--vADoEmSh845X8YJ6F3o1LMzFifchCQ_0DZCflZHEbCIhHHEK0J5KIWZ8jqlJO6hkrsBfMTxABPjXIJfnTMLLUIjqAiqhf0nZDRrPuV1NJpYnx0p4PLEjtYancHcttytqwrQmzGUQUptn-SZ" />
@@ -79,15 +88,20 @@
             <p class="text-text-primary dark:text-white text-lg font-bold">Leila Boudiaf</p>
             <p class="text-text-secondary text-sm">leila.boudiaf@example.dz</p>
             <div class="mt-2 flex flex-wrap gap-2">
-              <span class="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900 px-2.5 py-0.5 text-xs font-semibold text-blue-800 dark:text-blue-200">Étudiant</span>
-              <span class="inline-flex items-center rounded-full bg-indigo-100 dark:bg-indigo-900 px-2.5 py-0.5 text-xs font-semibold text-indigo-800 dark:text-indigo-200">Niveau 5</span>
+              <span
+                class="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900 px-2.5 py-0.5 text-xs font-semibold text-blue-800 dark:text-blue-200">Étudiant</span>
+              <span
+                class="inline-flex items-center rounded-full bg-indigo-100 dark:bg-indigo-900 px-2.5 py-0.5 text-xs font-semibold text-indigo-800 dark:text-indigo-200">Niveau
+                5</span>
             </div>
           </div>
           <div class="flex shrink-0 gap-1">
-            <button class="flex size-9 items-center justify-center rounded-full text-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button
+              class="flex size-9 items-center justify-center rounded-full text-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700">
               <span class="material-symbols-outlined" style="font-size: 20px;">edit</span>
             </button>
-            <button class="flex size-9 items-center justify-center rounded-full text-red-500 hover:bg-red-50 dark:hover:bg-red-900/50">
+            <button
+              class="flex size-9 items-center justify-center rounded-full text-red-500 hover:bg-red-50 dark:hover:bg-red-900/50">
               <span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
             </button>
           </div>
@@ -101,7 +115,8 @@
       </div>
 
       <!-- Utilisateur 2 -->
-      <div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 shadow-sm">
+      <div
+        class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 shadow-sm">
         <div class="flex items-start gap-4">
           <img class="h-14 w-14 shrink-0 rounded-full object-cover" data-alt="Photo de profil de Cody Fisher"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6aRWwZwlMZTol8h26Jcsq2BmyxIQTzcUZqzi0yId-vKxpc28khjFn6I4KYajpoLicDekA_l5-3ORGm1j8GVYVZtSonbsBUse23AlzkwTVPng06BjukmwDKRJ_4dCUFgDL0qKU5zZiA7j9naMilKrahEYNnm0EZ6y_qUvbN50bg7NBZlOKyNoRRQdDvjMMNW08vxN_namyY0BzTDF7U25VZMEKrA8rhsCIjuEtGmTQKT4H2UC7eGF1Kg3GScT0Lx9LCjhpJC36_uDq" />
@@ -109,14 +124,17 @@
             <p class="text-text-primary dark:text-white text-lg font-bold">Nabil Mansouri</p>
             <p class="text-text-secondary text-sm">nabil.mansouri@example.dz</p>
             <div class="mt-2 flex flex-wrap gap-2">
-              <span class="inline-flex items-center rounded-full bg-red-100 dark:bg-red-900 px-2.5 py-0.5 text-xs font-semibold text-red-800 dark:text-red-200">Administrateur</span>
+              <span
+                class="inline-flex items-center rounded-full bg-red-100 dark:bg-red-900 px-2.5 py-0.5 text-xs font-semibold text-red-800 dark:text-red-200">Administrateur</span>
             </div>
           </div>
           <div class="flex shrink-0 gap-1">
-            <button class="flex size-9 items-center justify-center rounded-full text-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button
+              class="flex size-9 items-center justify-center rounded-full text-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700">
               <span class="material-symbols-outlined" style="font-size: 20px;">edit</span>
             </button>
-            <button class="flex size-9 items-center justify-center rounded-full text-red-500 hover:bg-red-50 dark:hover:bg-red-900/50">
+            <button
+              class="flex size-9 items-center justify-center rounded-full text-red-500 hover:bg-red-50 dark:hover:bg-red-900/50">
               <span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
             </button>
           </div>
@@ -130,7 +148,8 @@
       </div>
 
       <!-- Utilisateur 3 -->
-      <div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 shadow-sm">
+      <div
+        class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 shadow-sm">
         <div class="flex items-start gap-4">
           <img class="h-14 w-14 shrink-0 rounded-full object-cover" data-alt="Photo de profil de Jane Cooper"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX_V5OpFATdW9aCQ4jyoKid916WXSrjDyvRwj9YRl-7uVAp905zFPmQRuPVl32MHItCjJCApTZXg4L08nKMVb7MlDMPb0VbpwgSQfbcuu5_3ANLlcxpuFtHFGh0ZhZeQkJNZwyBFPwfkkSeWf-KZEILm29rnjqW4l98CkN2werCnSu-GKcyNRqU4ethz124oQ2f7Putog2cTjANnmMy1jFpx7y7XkLBQTvBjv7L_OQv9eTOGHoF9KL1JmV_OEBzQvGQwtKDQ9Nhxbv" />
@@ -138,15 +157,20 @@
             <p class="text-text-primary dark:text-white text-lg font-bold">Yasmina Cherifi</p>
             <p class="text-text-secondary text-sm">yasmina.cherifi@example.dz</p>
             <div class="mt-2 flex flex-wrap gap-2">
-              <span class="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900 px-2.5 py-0.5 text-xs font-semibold text-blue-800 dark:text-blue-200">Étudiant</span>
-              <span class="inline-flex items-center rounded-full bg-indigo-100 dark:bg-indigo-900 px-2.5 py-0.5 text-xs font-semibold text-indigo-800 dark:text-indigo-200">Niveau 2</span>
+              <span
+                class="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900 px-2.5 py-0.5 text-xs font-semibold text-blue-800 dark:text-blue-200">Étudiant</span>
+              <span
+                class="inline-flex items-center rounded-full bg-indigo-100 dark:bg-indigo-900 px-2.5 py-0.5 text-xs font-semibold text-indigo-800 dark:text-indigo-200">Niveau
+                2</span>
             </div>
           </div>
           <div class="flex shrink-0 gap-1">
-            <button class="flex size-9 items-center justify-center rounded-full text-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button
+              class="flex size-9 items-center justify-center rounded-full text-text-secondary hover:bg-gray-100 dark:hover:bg-gray-700">
               <span class="material-symbols-outlined" style="font-size: 20px;">edit</span>
             </button>
-            <button class="flex size-9 items-center justify-center rounded-full text-red-500 hover:bg-red-50 dark:hover:bg-red-900/50">
+            <button
+              class="flex size-9 items-center justify-center rounded-full text-red-500 hover:bg-red-50 dark:hover:bg-red-900/50">
               <span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
             </button>
           </div>
@@ -160,18 +184,22 @@
       </div>
 
       <!-- État vide -->
-      <div class="flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-border-color dark:border-gray-700 bg-white dark:bg-slate-900 p-12 text-center">
-        <div class="flex h-16 w-16 items-center justify-center rounded-full bg-light-blue dark:bg-gray-700 text-primary dark:text-primary">
+      <div
+        class="flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-border-color dark:border-gray-700 bg-white dark:bg-slate-900 p-12 text-center">
+        <div
+          class="flex h-16 w-16 items-center justify-center rounded-full bg-light-blue dark:bg-gray-700 text-primary dark:text-primary">
           <span class="material-symbols-outlined" style="font-size: 32px;">search_off</span>
         </div>
         <h3 class="mt-4 text-lg font-semibold text-text-primary dark:text-white">Aucun utilisateur trouvé</h3>
-        <p class="mt-1 text-sm text-text-secondary">Essayez d'ajuster votre recherche ou filtre pour trouver ce que vous cherchez.</p>
+        <p class="mt-1 text-sm text-text-secondary">Essayez d'ajuster votre recherche ou filtre pour trouver ce que vous
+          cherchez.</p>
       </div>
     </main>
 
     <!-- Bouton flottant pour ajouter un utilisateur -->
     <div class="fixed bottom-6 right-6">
-      <button class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-transform hover:scale-105">
+      <button
+        class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-transform hover:scale-105">
         <span class="material-symbols-outlined" style="font-size: 32px;">add</span>
       </button>
     </div>
