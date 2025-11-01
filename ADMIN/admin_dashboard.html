@@ -1,137 +1,162 @@
 <!DOCTYPE html>
 
-<html class="light dark" lang="fr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>MémoÉtudiant - Tableau de Bord</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script>tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#607AFB", "background-light": "#f5f6f8", "background-dark": "#0f1323"}, fontFamily: {display: "Be Vietnam Pro"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}}}};</script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
-<style>
+<html class="light dark" lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>MémoÉtudiant - Tableau de Bord</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#607AFB", "background-light": "#f5f6f8", "background-dark": "#0f1323" }, fontFamily: { display: "Be Vietnam Pro" }, borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" } } } };</script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-<style>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-<style>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-<style>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
+</head>
+
 <body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-gray-200">
-<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<!-- TopAppBar -->
-<div class="flex items-center bg-background-light dark:bg-background-dark p-4 sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800">
-<div class="flex size-12 shrink-0 items-center">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9" data-alt="Admin profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoVuKk6l_1Pqq-sP9ABTKqq7E7sE4JJR85elwyaneepkHqmptPlNuGbJ8apEsRXegVimDJ9HRC1rzaIMm_1iEqEMqYgqvQWv4fw9ldz2mPPElLbwsz0_QHsXOjUKERm_8DJXs00jcyf18l6AZvpOR2POFvOUNPBfUwzN2QlT3zC9Gk8K8RhXbhv-1A-6xE7kZzDGutbe19PwqwL3cQpLyc6D-mFhTS5oyuznz_EzlXgQGZmC4W4Ltv5Uriy8v6xFOk1l1P309g4bQi");'></div>
-</div>
-<h2 class="text-[#111418] dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Tableau de Bord</h2>
-<div class="flex w-12 items-center justify-end">
-<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-[#111418] dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
-<span class="material-symbols-outlined text-2xl">notifications</span>
-</button>
-</div>
-</div>
-<!-- HeadlineText -->
-<h1 class="text-[#111418] dark:text-gray-100 tracking-light text-[32px] font-bold leading-tight px-4 text-left pb-3 pt-6">Bonjour, Admin</h1>
-<!-- Stats -->
-<div class="flex flex-wrap gap-4 p-4">
-<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl bg-white dark:bg-gray-800 p-6 border border-gray-200 dark:border-gray-700">
-<p class="text-[#111418] dark:text-gray-300 text-base font-medium leading-normal">Utilisateurs Totals</p>
-<p class="text-[#111418] dark:text-white tracking-light text-2xl font-bold leading-tight">1,250</p>
-<p class="text-[#078838] dark:text-green-400 text-base font-medium leading-normal">+5%</p>
-</div>
-<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl bg-white dark:bg-gray-800 p-6 border border-gray-200 dark:border-gray-700">
-<p class="text-[#111418] dark:text-gray-300 text-base font-medium leading-normal">Cours Actifs</p>
-<p class="text-[#111418] dark:text-white tracking-light text-2xl font-bold leading-tight">85</p>
-<p class="text-[#078838] dark:text-green-400 text-base font-medium leading-normal">+2</p>
-</div>
-<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl bg-white dark:bg-gray-800 p-6 border border-gray-200 dark:border-gray-700">
-<p class="text-[#111418] dark:text-gray-300 text-base font-medium leading-normal">Taux d'Engagement</p>
-<p class="text-[#111418] dark:text-white tracking-light text-2xl font-bold leading-tight">75%</p>
-<p class="text-[#078838] dark:text-green-400 text-base font-medium leading-normal">+3%</p>
-</div>
-</div>
-<!-- TextGrid -->
-<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4">
-<div class="flex flex-1 cursor-pointer gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">group</span>
-<div class="flex flex-col gap-1 mt-2">
-<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Gestion des Utilisateurs</h2>
-<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Voir, ajouter, modifier</p>
-</div>
-</div>
-<div class="flex flex-1 cursor-pointer gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">school</span>
-<div class="flex flex-col gap-1 mt-2">
-<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Gestion des Cours</h2>
-<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Créer, éditer, supprimer</p>
-</div>
-</div>
-<div class="flex flex-1 cursor-pointer gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">bar_chart</span>
-<div class="flex flex-col gap-1 mt-2">
-<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Statistiques Détaillées</h2>
-<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Accéder aux rapports</p>
-</div>
-</div>
-<div class="flex flex-1 cursor-pointer gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
-<span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
-<div class="flex flex-col gap-1 mt-2">
-<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Support &amp; Feedback</h2>
-<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Gérer les demandes</p>
-</div>
-</div>
-</div>
-<!-- SectionHeader -->
-<h2 class="text-[#111418] dark:text-gray-100 text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Activité Récente</h2>
-<!-- Recent Activity List (New Component) -->
-<div class="flex flex-col gap-2 px-4 pb-8">
-<div class="flex items-center gap-4 rounded-lg bg-white dark:bg-gray-800/50 p-3 border border-transparent dark:border-gray-800">
-<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
-<span class="material-symbols-outlined text-primary">person_add</span>
-</div>
-<div class="flex flex-1 flex-col">
-<p class="text-sm font-medium text-[#111418] dark:text-gray-200">Nouvel utilisateur inscrit</p>
-<p class="text-xs text-[#617589] dark:text-gray-400">Jean Dupont - il y a 2h</p>
-</div>
-</div>
-<div class="flex items-center gap-4 rounded-lg bg-white dark:bg-gray-800/50 p-3 border border-transparent dark:border-gray-800">
-<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
-<span class="material-symbols-outlined text-primary">edit_note</span>
-</div>
-<div class="flex flex-1 flex-col">
-<p class="text-sm font-medium text-[#111418] dark:text-gray-200">Cours de 'Biologie' mis à jour</p>
-<p class="text-xs text-[#617589] dark:text-gray-400">Par vous - il y a 5h</p>
-</div>
-</div>
-<div class="flex items-center gap-4 rounded-lg bg-white dark:bg-gray-800/50 p-3 border border-transparent dark:border-gray-800">
-<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
-<span class="material-symbols-outlined text-primary">forum</span>
-</div>
-<div class="flex flex-1 flex-col">
-<p class="text-sm font-medium text-[#111418] dark:text-gray-200">Nouveau ticket de support</p>
-<p class="text-xs text-[#617589] dark:text-gray-400">Marie Claire - il y a 1 jour</p>
-</div>
-</div>
-</div>
-</div>
-</body></html>
+  <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <!-- TopAppBar -->
+    <div
+      class="flex items-center bg-background-light dark:bg-background-dark p-4 sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800">
+      <div class="flex size-12 shrink-0 items-center">
+        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9" data-alt="Admin profile picture"
+          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoVuKk6l_1Pqq-sP9ABTKqq7E7sE4JJR85elwyaneepkHqmptPlNuGbJ8apEsRXegVimDJ9HRC1rzaIMm_1iEqEMqYgqvQWv4fw9ldz2mPPElLbwsz0_QHsXOjUKERm_8DJXs00jcyf18l6AZvpOR2POFvOUNPBfUwzN2QlT3zC9Gk8K8RhXbhv-1A-6xE7kZzDGutbe19PwqwL3cQpLyc6D-mFhTS5oyuznz_EzlXgQGZmC4W4Ltv5Uriy8v6xFOk1l1P309g4bQi");'>
+        </div>
+      </div>
+      <h2 class="text-[#111418] dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Tableau
+        de Bord</h2>
+      <div class="flex w-12 items-center justify-end">
+        <button
+          class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent text-[#111418] dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+          <span class="material-symbols-outlined text-2xl">notifications</span>
+        </button>
+      </div>
+    </div>
+    <!-- HeadlineText -->
+    <h1
+      class="text-[#111418] dark:text-gray-100 tracking-light text-[32px] font-bold leading-tight px-4 text-left pb-3 pt-6">
+      Bonjour, Admin</h1>
+    <!-- Stats -->
+    <div class="flex flex-wrap gap-4 p-4">
+      <div
+        class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl  p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <p class="text-[#111418] dark:text-gray-300 text-base font-medium leading-normal">Utilisateurs Totals</p>
+        <p class="text-[#111418] dark:text-white tracking-light text-2xl font-bold leading-tight">1,250</p>
+        <p class="text-[#078838] dark:text-green-400 text-base font-medium leading-normal">+5%</p>
+      </div>
+      <div
+        class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <p class="text-[#111418] dark:text-gray-300 text-base font-medium leading-normal">Cours Actifs</p>
+        <p class="text-[#111418] dark:text-white tracking-light text-2xl font-bold leading-tight">85</p>
+        <p class="text-[#078838] dark:text-green-400 text-base font-medium leading-normal">+2</p>
+      </div>
+      <div
+        class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <p class="text-[#111418] dark:text-gray-300 text-base font-medium leading-normal">Taux d'Engagement</p>
+        <p class="text-[#111418] dark:text-white tracking-light text-2xl font-bold leading-tight">75%</p>
+        <p class="text-[#078838] dark:text-green-400 text-base font-medium leading-normal">+3%</p>
+      </div>
+    </div>
+    <!-- TextGrid -->
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4 ">
+      <div
+        class="flex flex-1 cursor-pointer gap-3 rounded-xl  p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <span class="material-symbols-outlined text-primary text-3xl">group</span>
+        <div class="flex flex-col gap-1 mt-2">
+          <h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Gestion des Utilisateurs</h2>
+          <p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Voir, ajouter, modifier</p>
+        </div>
+      </div>
+      <div
+        class="flex flex-1 cursor-pointer gap-3 rounded-xl  p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <span class="material-symbols-outlined text-primary text-3xl">school</span>
+        <div class="flex flex-col gap-1 mt-2">
+          <h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Gestion des Cours</h2>
+          <p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Créer, éditer, supprimer</p>
+        </div>
+      </div>
+      <div
+        class="flex flex-1 cursor-pointer gap-3 rounded-xl  p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <span class="material-symbols-outlined text-primary text-3xl">bar_chart</span>
+        <div class="flex flex-col gap-1 mt-2">
+          <h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Statistiques Détaillées</h2>
+          <p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Accéder aux rapports</p>
+        </div>
+      </div>
+      <div
+        class="flex flex-1 cursor-pointer gap-3 rounded-xl  p-4 flex-col hover:bg-gray-50 dark:hover:bg-gray-700/50 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+        <div class="flex flex-col gap-1 mt-2">
+          <h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Support &amp; Feedback</h2>
+          <p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Gérer les demandes</p>
+        </div>
+      </div>
+    </div>
+    <!-- SectionHeader -->
+    <h2
+      class="text-[#111418] dark:text-gray-100 text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+      Activité Récente</h2>
+    <!-- Recent Activity List (New Component) -->
+    <div class="flex flex-col gap-2 px-4 pb-8">
+      <div
+        class="flex items-center gap-4 rounded-lg p-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
+          <span class="material-symbols-outlined text-primary">person_add</span>
+        </div>
+        <div class="flex flex-1 flex-col">
+          <p class="text-sm font-medium text-[#111418] dark:text-gray-200">Nouvel utilisateur inscrit</p>
+          <p class="text-xs text-[#617589] dark:text-gray-400">Jean Dupont - il y a 2h</p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-4 rounded-lg p-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
+          <span class="material-symbols-outlined text-primary">edit_note</span>
+        </div>
+        <div class="flex flex-1 flex-col">
+          <p class="text-sm font-medium text-[#111418] dark:text-gray-200">Cours de 'Biologie' mis à jour</p>
+          <p class="text-xs text-[#617589] dark:text-gray-400">Par vous - il y a 5h</p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-4 rounded-lg p-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
+          <span class="material-symbols-outlined text-primary">forum</span>
+        </div>
+        <div class="flex flex-1 flex-col">
+          <p class="text-sm font-medium text-[#111418] dark:text-gray-200">Nouveau ticket de support</p>
+          <p class="text-xs text-[#617589] dark:text-gray-400">Marie Claire - il y a 1 jour</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
